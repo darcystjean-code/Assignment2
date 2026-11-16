@@ -10,7 +10,18 @@
   <body>
     <%- include('partials/header.ejs') %>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <form>
+      <div class="form-group">
+        <p>Send your feedback here!</p>
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" rows="4"></textarea>
+        <input type="submit" class="btn btn-primary mb-2" value="Send" id="form-button">
+      </div>
+    </form>
     <div class="fixed-bottom">
       <%- include('partials/footer.ejs') %>
     </div>
